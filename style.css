@@ -1,0 +1,116 @@
+/*
+Theme Name: Diario Basado en Hechos Reales
+Theme URI: 
+Author: CronoX RdlC
+Author URI: 
+Description: Diario personal de Helena Saenz
+Requires at least: 5.7
+Tested up to: 5.7.2
+Requires PHP: 5.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: DirarioBHR
+Tags: 
+
+Para uso exclusivo en BasadoEnHechosReales.mx bajo el mando den Helena Saenz. Si el sitio llegase a cambiar de administrador general, se tendran que actualizar los terminos de uso.
+*/
+
+/* Archivos importados */
+/* Normalize */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+/* FontAwesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+/*Fuente para especiales - font-family: 'Orbitron', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+/*Fuente para titulos - font-family: 'Oxanium', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Oxanium&display=swap');
+/*Fuente para texto en general - font-family: 'Roboto Mono', monospace;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/*Variables*/
+:root{
+    --coloruno: #222831;
+    --colordos: #393e46;
+    --colortres: #00adb5; /*rgb: 0,68,71*/
+    --colorcuatro: #eeeeee;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.central{
+    font-family: 'Roboto Mono', monospace;
+    margin: 0 auto;
+    max-width: 1240px;
+}
+.enlace-hover:hover{
+    color: var(--colortres);
+}
+
+/* Header */
+/* Seccion del logo y publicidad*/
+header .logo-publicidad{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo-publicidad a{
+    order: 2;
+    text-align: center;
+    text-decoration: none;
+    color: var(--coloruno);
+    font-size: 3.75rem;/*60px*/
+    transition: ease-in 0.2s;
+}
+header .logo-publicidad h2{
+    font-family:  'Orbitron', sans-serif;
+}
+header .logo-publicidad h1{
+    font: 0.5em 'Oxanium', cursive;
+}
+header .logo-publicidad .publicidad{
+    background: grey;
+    width: 190px;
+    height: 250px;
+}
+header .logo-publicidad .publi-movil{
+    background: gray;
+    width: 310px;
+    height: 100px;
+    margin: 5px;
+    box-sizing: border-box;
+    order: 4;
+    display: none;
+}
+header .logo-publicidad .publi-izq{
+    order: 1;
+}
+header .logo-publicidad .publi-der{
+    order: 3;
+}
+
+@media (max-width: 780px) {
+    /* Ajustando las dimensiones de la fuente */
+    html{
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 620px){
+    html{
+        font-size: 60%;
+    }
+    /* Ajsutando el area del logo y la publicidad */
+    header .logo-publicidad{
+        flex-direction: column;
+    }
+    header .logo-publicidad .publicidad{
+        display: none;
+    }
+    header .logo-publicidad .publi-movil{
+        display: block;
+    }
+}
