@@ -92,14 +92,53 @@ header .logo-publicidad .publi-der{
     order: 3;
 }
 
-@media (max-width: 780px) {
+/* Menu */
+#btn-menu{
+    display: none;
+}
+nav{
+    border-top: solid 5px var(--colortres);
+    border-bottom: solid 1px var(--colortres);
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+nav label{
+    display: none;
+    font-size: 4rem;
+    text-align: center;
+    margin: 3px 0;
+    color: var(--colordos);
+    transition: ease-in 0.2s;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0.7em 0;
+}
+nav ul a{
+    text-decoration: none;
+    font: 1.7rem 'Orbitron', sans-serif;
+    color: var(--coloruno);
+    transition: ease-in 0.2s;
+}
+nav ul a:hover{
+    color: var(--colortres);
+}
+
+
+/* Estilos para el diseño responsivo */
+
+@media only screen and (max-width: 780px) {
     /* Ajustando las dimensiones de la fuente */
     html{
         font-size: 80%;
     }
 }
 
-@media (max-width: 620px){
+@media only screen and (max-width: 620px){
     html{
         font-size: 60%;
     }
@@ -111,6 +150,38 @@ header .logo-publicidad .publi-der{
         display: none;
     }
     header .logo-publicidad .publi-movil{
+        display: block;
+    }
+
+    /* Ajuste del menu */
+    nav label{
+        display: block;
+        width: 100%;
+    }
+    nav label:hover{
+        color: var(--colortres);
+    }
+    nav .menu-principal-container{
+        display: none;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        padding: 1em 0;
+        width: 100%;
+        text-align: center;
+        transition: ease-in 0.2s;
+    }
+    nav ul a{
+        display: block;
+        font-size: 3rem;
+        width: 100%;
+    }
+    nav ul li:hover{
+        background: var(--colordos);
+    }
+    #btn-menu:checked ~ .menu-principal-container{
         display: block;
     }
 }
