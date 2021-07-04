@@ -62,7 +62,7 @@ header .logo-publicidad a{
     text-align: center;
     text-decoration: none;
     color: var(--coloruno);
-    font-size: 3.75rem;/*60px*/
+    font-size: 3rem;/*60px*/
     transition: ease-in 0.2s;
 }
 header .logo-publicidad h2{
@@ -120,12 +120,31 @@ nav ul{
 }
 nav ul a{
     text-decoration: none;
-    font: 1.7rem 'Orbitron', sans-serif;
+    font: 1.3rem 'Orbitron', sans-serif;
     color: var(--coloruno);
     transition: ease-in 0.2s;
 }
 nav ul a:hover{
     color: var(--colortres);
+}
+
+/* Pie de paguina */
+footer .cintillo-pie-paguina{
+    background: var(--coloruno);
+    color: var(--colorcuatro);
+    font-size: .7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: .2em 0;
+    transition: ease-in 0.2s;
+}
+footer .cintillo-pie-paguina a{
+    color: var(--colorcuatro);
+    text-decoration: none;
+}
+footer .cintillo-pie-paguina .realizado-por p{
+    display: inline-block;
 }
 
 
@@ -134,7 +153,7 @@ nav ul a:hover{
 @media only screen and (max-width: 780px) {
     /* Ajustando las dimensiones de la fuente */
     html{
-        font-size: 80%;
+        font-size: 70%;
     }
 }
 
@@ -183,5 +202,11 @@ nav ul a:hover{
     }
     #btn-menu:checked ~ .menu-principal-container{
         display: block;
+    }
+
+    /* Ajuste del pie de paguina */
+    footer .cintillo-pie-paguina{
+        flex-direction: column;
+        text-align: center;
     }
 }
