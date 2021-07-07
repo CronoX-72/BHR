@@ -129,6 +129,50 @@ nav ul a:hover{
 }
 
 /* Pie de paguina */
+footer{
+    width: 100%;
+}
+footer .pie-paguina{
+    background: var(--colordos);
+    color: var(--colortres);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer .pie-paguina .pcaja{
+    min-width: 306px;
+    height: 13em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .pie-paguina .caja-izquierda h2{
+    font: 2.5rem "Orbitron", sans-serif;
+}
+footer .pie-paguina .caja-izquierda h1{
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+}
+footer .pie-paguina .caja-central li{
+    list-style: none;
+    text-align: center;
+    margin: .7em 0;
+}
+footer .pie-paguina .caja-central a{
+    text-decoration: none;
+    color: var(--colortres);
+}
+footer .pie-paguina .caja-central a:hover{
+    color: var(--colorcuatro);
+}
+footer .pie-paguina .caja-central i{
+    margin: .5em;
+}
+footer .pie-paguina .caja-derecha{
+    /*Estilos para la caja que se supone lleva publicidad*/
+}
 footer .cintillo-pie-paguina{
     background: var(--coloruno);
     color: var(--colorcuatro);
@@ -153,7 +197,7 @@ footer .cintillo-pie-paguina .realizado-por p{
 @media only screen and (max-width: 780px) {
     /* Ajustando las dimensiones de la fuente */
     html{
-        font-size: 70%;
+        font-size: 80%;
     }
 }
 
