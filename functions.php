@@ -17,4 +17,6 @@
     }
     add_action( 'init', 'register_bhr_menus' );
 
+    /* Sidebar */
+    
 ?>
