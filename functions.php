@@ -22,5 +22,4 @@
     // Habilitando imagenes destacadas
     add_theme_support('post-thumbnails');
     
-    
 ?>

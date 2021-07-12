@@ -195,7 +195,6 @@ nav ul a:hover{
     text-align: right ;
 }
 
-
 /* Diseño de contenido no encontrado */
 .none{
     text-align: center;
@@ -207,6 +206,91 @@ nav ul a:hover{
 .none .searchform{
     margin: 1em 0 4em 0;
 } 
+
+/* Post sencillo */
+.post{
+    width: 100%;
+    margin: 2em 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 1em;
+    grid-template-areas: "header post post post gadget";
+}
+.post .header-post-simple{
+    grid-area: header;
+    padding:  0 1em 0 0;
+    box-sizing: border-box;
+    border-right: 1px solid var(--colordos);
+}
+.post .header-post-simple h1{
+    font-family: 'Oxanium', cursive;
+    text-align: right;
+    font-size: 2rem;
+    border-bottom: 1px solid var(--colortres);
+    padding: 0 0 1em 0;
+}
+.post .header-post-simple p{
+    font-size: .8rem;
+    color: var(--colordos);
+}
+.post .header-post-simple a{
+    text-decoration: none;
+    color: var(--colordos);
+}
+.post .header-post-simple a:hover{
+    color: var(--colortres);
+}
+.post .contenido-simple{
+    grid-area: post;
+    box-sizing: border-box;
+    padding: 0 .8em;
+}
+.post .contenido-simple img{
+    width: 100%;
+    height: 23em;
+    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: 2em;
+    border-radius: 7px;
+}
+.post .contenido-simple h2{
+    text-align: right;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid var(--colordos);
+}
+.post .contenido-simple p{
+    margin-bottom: 1em;
+}
+.post .contenido-simple a{
+    color: var(--colortres);
+    text-decoration: none;
+}
+.post .contenido-simple a:hover{
+    text-decoration: underline var(--colortres);
+    color: var(--colordos);
+}
+
+/* Paguinado next y previous */
+.post-nav{
+    border-top: 1px solid var(--colordos);
+    height: 2em;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post-nav a{
+    text-decoration: none;
+    color: var(--colordos);
+    margin: 0 3em;
+}
+.post-nav a:hover{
+    color: var(--colortres);
+}
+.pona-movil{
+    display: none;
+}
 
 /* Pie de paguina */
 footer{
@@ -335,6 +419,16 @@ footer .cintillo-pie-paguina .realizado-por p{
     }
     .resumen figure{
         width: 100%;
+    }
+
+    /* Ajuste del navegador de paguinas */
+    .pona-total{
+        display: none;
+    }
+    .pona-movil{
+        display: flex;
+        font-size: 2rem;
+        padding: .1em;
     }
 
     /* Ajuste del pie de paguina */

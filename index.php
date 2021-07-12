@@ -19,6 +19,9 @@
     else{
         get_template_part( 'template-parts/excerpt/excerpt-none' );
     }
+    
+    // Siguiente y Anterior en la paguina de archivos
+    get_template_part( 'template-parts/excerpt/paguinado' );
 
     // Pie de paguina
     get_footer();
