@@ -1,12 +1,12 @@
 <?php
-    /* Cargando la hoja de estilos */
+    // Cargando la paguina de estilos
     function bhr_load_styles(){
         wp_register_style('theme_style',get_stylesheet_uri(),'','1.0','all');
         wp_enqueue_style('theme_style');
     }
     add_action('wp_enqueue_scripts','bhr_load_styles');
 
-    /* Registrando menus - Serán 2, uno para el header que es el principal y otro para el footer */
+    // Registrando menus - Serán 2, uno para el header que es el principal y otro para el footer
     function register_bhr_menus(){
         register_nav_menus(
             array(
@@ -17,6 +17,10 @@
     }
     add_action( 'init', 'register_bhr_menus' );
 
-    /* Sidebar */
+    // Siderbar
+
+    // Habilitando imagenes destacadas
+    add_theme_support('post-thumbnails');
+    
     
 ?>
