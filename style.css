@@ -44,6 +44,8 @@ Para uso exclusivo en BasadoEnHechosReales.mx bajo el mando den Helena Saenz. Si
     font-family: 'Roboto Mono', monospace;
     margin: 0 auto;
     max-width: 1240px;
+    padding: .5em;
+    box-sizing: border-box;
 }
 .enlace-hover:hover{
     color: var(--colortres);
@@ -230,6 +232,9 @@ nav ul a:hover{
     border-bottom: 1px solid var(--colortres);
     padding: 0 0 1em 0;
 }
+.post .header-post-simple .datos-post{
+    margin-bottom: 2em;
+}
 .post .header-post-simple p{
     font-size: .8rem;
     color: var(--colordos);
@@ -243,6 +248,7 @@ nav ul a:hover{
 }
 .post .contenido-simple{
     grid-area: post;
+    line-height: 1.5em;
     box-sizing: border-box;
     padding: 0 .8em;
 }
@@ -260,11 +266,31 @@ nav ul a:hover{
     border-bottom: 1px solid var(--colordos);
 }
 .post .contenido-simple p{
-    margin-bottom: 1em;
+    margin-top: 1.2em;
 }
 .post .contenido-simple a{
     color: var(--colortres);
     text-decoration: none;
+}
+.post .contenido-simple .wp-block-quote{
+    margin: 2em;
+    box-sizing: border-box;
+    font-style: italic;
+}
+.post .contenido-simple .wp-block-quote cite{
+    display: block;
+    text-align: right;
+    margin-right: 1em;
+    font-size: .8rem;
+}
+.post .contenido-simple li{
+    margin-left: 1.5em;
+}
+.post .contenido-simple figure figcaption{
+    font-size: .7rem;
+    text-align: center;
+    position: relative;
+    top: -3em;
 }
 .post .contenido-simple a:hover{
     text-decoration: underline var(--colortres);
@@ -429,6 +455,14 @@ footer .cintillo-pie-paguina .realizado-por p{
         display: flex;
         font-size: 2rem;
         padding: .1em;
+    }
+
+    /*Ajuste del post sencillo*/
+    .post{
+    grid-template-columns: auto;
+    grid-template-areas: "header"
+                            "post"
+                            "gadget";
     }
 
     /* Ajuste del pie de paguina */

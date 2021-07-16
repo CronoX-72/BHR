@@ -1,9 +1,11 @@
 <div class="post">
     <header class="header-post-simple">
         <?php the_title( '<h1 class="titulo-post-simple">', '</h1>' ); ?>
-        <p> Fecha: <?php the_time(get_option('date_format')); ?> </p>
-        <p> Autor: <?php the_author(); ?> </p>
-        <p> Categorias: <?php the_category(', '); ?> </p>
+        <div class="datos-post">
+            <p> Fecha: <?php the_time(get_option('date_format')); ?> </p>
+            <p> Autor: <?php the_author(); ?> </p>
+            <p> Categorias: <?php the_category(', '); ?> </p>
+        </div>
     </header>
     <div class="contenido-simple">
         <?php
