@@ -23,14 +23,51 @@
         register_sidebar(
             array(
                 'name'          => __( 'Sidebar','bhr' ),
-                'id'            => 'main_sidebar',
-                'description'   => __( 'Este es el sidebar Pincipal','bhr' ),
-                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-                'after_widget'  => '</aside>',
+                'id'            => 'sidebar_grl',
+                'description'   => __( 'Este es el sidebar general','bhr' ),
                 'before_title'  => '<h3 class="widget-title">',
                 'after_title'   => '</h3>',
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
             )
         );
+
+        register_sidebar(
+            array(
+                'name'          => __( 'Anuncio Superior Uno','bhr' ),
+                'id'            => 'anuncio-uno',
+                'description'   => __( 'Colocar aqui los anuncios de la cabecera','bhr' ),
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+            )
+        );
+
+        register_sidebar(
+            array(
+                'name'          => __( 'Anuncio Superior dos','bhr' ),
+                'id'            => 'anuncio-dos',
+                'description'   => __( 'Colocar aqui los anuncios de la cabecera','bhr' ),
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</aside>',
+            )
+        );
+
+        register_sidebar(
+            array(
+                'name'          => __( 'Anuncio del pie de paguina','bhr' ),
+                'id'            => 'anuncio-pie',
+                'description'   => __( 'Colocar aqui los anuncios del píe de paguina','bhr' ),
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</aside>',
+            )
+        );
+
     }
     add_action( 'widgets_init','bhr_register_sidebars' );
 

@@ -1,0 +1,12 @@
+index       ->  Archivo principal que carga la totalidad del sitio.
+header      ->  Cabecera del sitio. Se mostrara constante en todo el sitio. 
+                Contendra 2 widgets para la publicidad; uno a cada extremo.
+                En sitios Moviles deberan mostrarse debajo del logo.
+footer      ->  Pie de paguina del sitio. Se mostrara constante en todo el sitio. 
+                Contendra solo 1 widget para la publicidad. Estara del lado derecho.
+                En sitios moviles debera mostrarse hasta abajo. 
+function    ->  Arechivo de funciones generales para la operación del sitio. 
+                Carga de la hoja de estilos.
+                Registro de menus. Tanto del principal como el del pie de paguina.
+                Registro de sidebars.
+                Habilitar imagenes destacas.

@@ -10,7 +10,7 @@ Requires PHP: 5.6
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: BHR
+Text Domain: bhr
 Tags: 
 
 Para uso exclusivo en BasadoEnHechosReales.mx bajo el mando den Helena Saenz. Si el sitio llegase a cambiar de administrador general, se tendran que actualizar los terminos de uso.
@@ -355,6 +355,8 @@ footer .pie-paguina .pcaja{
     justify-content: center;
     align-items: center;
 }
+
+/* Caja ziquierda del pie de paguina */
 footer .pie-paguina .caja-izquierda h2{
     font: 2.5rem "Orbitron", sans-serif;
 }
@@ -363,10 +365,31 @@ footer .pie-paguina .caja-izquierda h1{
     font-weight: normal;
     margin: 0;
 }
+
+/* Caja central del pie de paguina */
 footer .pie-paguina .caja-central li{
     list-style: none;
     text-align: center;
     margin: .7em 0;
+}
+footer .pie-paguina .caja-central li:hover{
+    text-decoration: underline;
+}
+footer .pie-paguina .caja-central .rrss-pie{
+    display: flex;
+    justify-content: space-between;
+}
+footer .pie-paguina .caja-central .redondo-rrss{
+    background: transparent;
+    height: 1.8em;
+    width: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+footer .pie-paguina .caja-central .redondo-rrss:hover{
+    background: var(--colortres);
 }
 footer .pie-paguina .caja-central a{
     text-decoration: none;
@@ -378,18 +401,15 @@ footer .pie-paguina .caja-central a:hover{
 footer .pie-paguina .caja-central i{
     margin: .5em;
 }
-footer .pie-paguina .caja-derecha{
-    /*Estilos para la caja que se supone lleva publicidad*/
-}
+
+/* Cintillo del pie del paguina - Se encuentra dentro del Footer*/
 footer .cintillo-pie-paguina{
     background: var(--coloruno);
     color: var(--colorcuatro);
     font-size: .7rem;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     padding: .2em 0;
-    transition: ease-in 0.2s;
 }
 footer .cintillo-pie-paguina a{
     color: var(--colorcuatro);
@@ -483,7 +503,7 @@ footer .cintillo-pie-paguina .realizado-por p{
                             "gadget";
     }
 
-    /* Ajuste del pie de paguina */
+    /* Pie de paguina */
     footer .cintillo-pie-paguina{
         flex-direction: column;
         text-align: center;
