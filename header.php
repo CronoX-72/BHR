@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> >
 <head>
@@ -10,4 +11,4 @@
 </head>
 <body>
     <div class="central">
-        <?php get_template_part('template-parts/header/site-header'); ?>
+        <?php get_template_part('template-parts/header/header-principal'); ?>

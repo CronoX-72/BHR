@@ -17,18 +17,24 @@ Para uso exclusivo en BasadoEnHechosReales.mx bajo el mando den Helena Saenz. Si
 */
 
 /* Archivos importados */
+
 /* Normalize */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
 /* FontAwesome */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
 /*Fuente para especiales - font-family: 'Orbitron', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 /*Fuente para titulos - font-family: 'Oxanium', cursive;*/
 @import url('https://fonts.googleapis.com/css2?family=Oxanium&display=swap');
-/*Fuente para texto en general - font-family: 'Roboto Mono', monospace;*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-/*Variables*/
+/*Fuente para texto en general - font-family: 'Roboto Mono', monospace;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+
+/* Variables de colores */
 :root{
     --coloruno: #222831;
     --colordos: #393e46;
@@ -36,22 +42,25 @@ Para uso exclusivo en BasadoEnHechosReales.mx bajo el mando den Helena Saenz. Si
     --colorcuatro: #eeeeee;
 }
 
+/* Formatos generales */
 *{
     margin: 0;
     padding: 0;
 }
 .central{
+    box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
     margin: 0 auto;
     max-width: 1240px;
-    padding: .5em;
-    box-sizing: border-box;
+    padding: 0 .2em;
 }
+
 .enlace-hover:hover{
     color: var(--colortres);
 }
 
 /* Header */
+
 /* Seccion del logo y publicidad*/
 header .logo-publicidad{
     width: 100%;
@@ -74,12 +83,10 @@ header .logo-publicidad h1{
     font: 0.5em 'Oxanium', cursive;
 }
 header .logo-publicidad .publicidad{
-    background: grey;
     width: 190px;
     height: 250px;
 }
 header .logo-publicidad .publi-movil{
-    background: gray;
     width: 310px;
     height: 100px;
     margin: 5px;
@@ -336,7 +343,7 @@ nav ul a:hover{
     margin-bottom: 3em;
 }
 
-/* Pie de paguina */
+/* Generales del Pie de paguina */
 footer{
     width: 100%;
 }
@@ -361,64 +368,79 @@ footer .pie-paguina .caja-izquierda h2{
     font: 2.5rem "Orbitron", sans-serif;
 }
 footer .pie-paguina .caja-izquierda h1{
-    font-size: 1rem;
-    font-weight: normal;
+    font: 1rem 'Roboto Mono', monospace;
     margin: 0;
 }
 
-/* Caja central del pie de paguina */
-footer .pie-paguina .caja-central li{
+/* Menu secundario dentro de la caja central del footer*/
+footer .pie-paguina .caja-central .menu-footer ul{
     list-style: none;
     text-align: center;
-    margin: .7em 0;
 }
-footer .pie-paguina .caja-central li:hover{
-    text-decoration: underline;
+footer .pie-paguina .caja-central .menu-footer li{
+    margin: .5em 0;
 }
-footer .pie-paguina .caja-central .rrss-pie{
-    display: flex;
-    justify-content: space-between;
-}
-footer .pie-paguina .caja-central .redondo-rrss{
-    background: transparent;
-    height: 1.8em;
-    width: 1.8em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-}
-footer .pie-paguina .caja-central .redondo-rrss:hover{
-    background: var(--colortres);
-}
-footer .pie-paguina .caja-central a{
-    text-decoration: none;
+footer .pie-paguina .caja-central .menu-footer a{
     color: var(--colortres);
+    text-decoration: none;
+    transition: all .3s ease;
 }
-footer .pie-paguina .caja-central a:hover{
+footer .pie-paguina .caja-central .menu-footer a:hover{
     color: var(--colorcuatro);
-}
-footer .pie-paguina .caja-central i{
-    margin: .5em;
+    text-decoration: underline var(--colortres);
 }
 
-/* Cintillo del pie del paguina - Se encuentra dentro del Footer*/
-footer .cintillo-pie-paguina{
+/* Redes sociales dentro de la caja central del footer */
+footer .pie-paguina .caja-central .rrss-pie{
+    display: flex;
+    width: 100%;
+    margin-top: 1em;
+    justify-content: space-evenly;
+}
+footer .pie-paguina .caja-central .rrss-pie a{
+    color: var(--colortres);
+    transition: all .3s ease;
+    text-decoration: none;
+}
+footer .pie-paguina .caja-central .rrss-pie a:hover{
+    color: var(--colorcuatro);
+}
+footer .pie-paguina .caja-central .rrss-pie a:hover > .rrss-redondo{
+    background: var(--colortres);
+}
+footer .pie-paguina .caja-central .rrss-pie .rrss-redondo{
+    height: 2.5em;
+    width: 2.5em;
+    background: transparent;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease;
+}
+
+/* cintillo del pie de paguina, donde van los creditos */
+footer .cintillo-creditos{
+    align-items: center;
     background: var(--coloruno);
     color: var(--colorcuatro);
-    font-size: .7rem;
     display: flex;
+    font-size: .7rem;
     justify-content: space-around;
     padding: .2em 0;
 }
-footer .cintillo-pie-paguina a{
-    color: var(--colorcuatro);
-    text-decoration: none;
-}
-footer .cintillo-pie-paguina .realizado-por p{
+footer .cintillo-creditos .realizado-por p{
     display: inline-block;
 }
-
+footer .cintillo-creditos a{
+    color: var(--colorcuatro);
+    text-decoration: none;
+    transition: all .3s ease;
+}
+footer .cintillo-creditos a:hover{
+    color: var(--colortres);
+    text-decoration: underline var(--colorcuatro);
+}
 
 /* Estilos para el diseño responsivo */
 
@@ -504,8 +526,7 @@ footer .cintillo-pie-paguina .realizado-por p{
     }
 
     /* Pie de paguina */
-    footer .cintillo-pie-paguina{
+    footer .cintillo-creditos{
         flex-direction: column;
-        text-align: center;
     }
 }

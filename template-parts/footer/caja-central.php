@@ -1,27 +1,34 @@
 <div class="pcaja caja-central">
-    
-    <!-- Aqui se colocara el menu secundario -->
-    <?php wp_nav_menu(
-        array(
-            'theme_location' => 'footer-menu',
-            'container_class' => 'Menu-Secundario'
-            )
-        );
+    <div class="menu-footer">
+        <?php wp_nav_menu(
+            array(
+                'theme_location' => 'footer-menu',
+                'container_class' => 'menu-secundario'
+                )
+            );
     ?>
+    </div>
 
-    <!-- Redes sociales -->
     <div class="rrss-pie">
-        <div class="redondo-rrss">
-            <a href="https://twitter.com/TroyaDeHelena"><i class="fab fa-twitter"></i></a>
-        </div>
-        <div class="redondo-rrss">
-            <a href="https://www.facebook.com/BasadoEnHechosReales"><i class="fab fa-facebook-f"></i></a>
-        </div>
-        <div class="redondo-rrss">
-            <a href="https://www.instagram.com/troyadehelena.bhr/"><i class="fab fa-instagram"></i></a>
-        </div>
-        <div class="redondo-rrss">
-            <a href="https://www.pinterest.com.mx/troyadehelena/"><i class="fab fa-pinterest-p"></i></a>
-        </div>
+        <a href="https://twitter.com/TroyaDeHelena">
+            <div class="rrss-redondo">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </a>
+        <a href="https://www.facebook.com/BasadoEnHechosReales">
+            <div class="rrss-redondo">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/troyadehelena.bhr/">
+            <div class="rrss-redondo">
+                <i class="fab fa-instagram"></i>
+            </div>
+        </a>
+        <a href="https://www.pinterest.com.mx/troyadehelena/">
+            <div class="rrss-redondo">
+                <i class="fab fa-pinterest-p"></i>
+            </div>
+        </a>
     </div>
 </div>
