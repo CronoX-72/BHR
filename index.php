@@ -3,15 +3,25 @@
     // Carga de la cabecera principal - Se carga el menu tambien
     get_header();
 
-    // Seccion de destacados
-    get_template_part( 'template-parts/listado-destacado' );
-    
-    // Seccion de respuestas
-    get_template_part( 'template-parts/listado-respuestas' );
+?>
+<div class="contenido">
 
-    // Seccion de rescientes
-    get_template_part( 'template-parts/listado-recientes' );
+<?php
 
+    // Loop de los destacados
+    get_template_part( 'template-parts/loops/loop-categoria-destacados' );
+
+    // Loop de respuestas a otros posts ajenos
+    get_template_part( 'template-parts/loops/loop-categoria-respuestas' );
+
+    // Loop de ultimas entradas
+    get_template_part( 'template-parts/loops/loop-ultimos-agregados' );
+
+?>
+
+</div>
+
+<?php
     // Carga del pie de paguina principal
     get_footer();
 
