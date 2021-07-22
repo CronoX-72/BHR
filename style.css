@@ -139,13 +139,26 @@ nav ul a:hover{
     color: var(--colortres);
 }
 
-/* Diseño de los post destacados */
+/* Grid del contenido central */
+.contenido-landingpage{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: .5em;
+    grid-template-columns: repeat(3,auto);
+    row-gap: .5em;
+    grid-template-areas: "des des des des des"
+                        "res res res wid wid"
+                        "ult ult ult wid wid";
+}
+
+/* Post destacados */
 .listado-destacados{
     /*display: grid;
     column-gap: .5em;
     row-gap: .5em;
     grid-auto-rows: 22rem;
     grid-template-columns: repeat(auto-fit,minmax(12em,1fr));*/
+    grid-area: des;
     display: grid;
     column-gap: .5em;
     grid-template-columns: repeat(4,24.4%);
@@ -183,6 +196,7 @@ nav ul a:hover{
     margin: .4em;
     background:#393e467c;
     width: 100%;
+    border-radius: 7px;
 }
 .listado-destacados figure:hover > .capa-destacados{
     visibility: visible;
@@ -193,72 +207,120 @@ nav ul a:hover{
     transform: scale(1.4);
 }
 
-/* Diseño del loop sencillo de wordpress */
-.resumen{
-    margin: .5em 0.3em .5em 0.3em;
+/* Titulo de secciones */
+.contenido-landingpage .titulo-categoria{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: .2em;
+    border-top: 3px solid var(--colortres);
+    margin: 1em 0;
+    color: var(--colortres);
+    text-align: right;
+}
+
+/* Categoria Respuestas */
+.listado-respuestas{
+    grid-area: res;
+}
+.listado-respuestas .respuesta{
+    margin: .7em 0;
+}
+.listado-respuestas .respuesta .titulo-respuesta{
+    
+}
+.listado-respuestas .respuesta .titulo-respuesta h2{
+    font: 1.3rem 'Oxanium', cursive;
+    border-bottom: 1px solid var(--colortres);
+    margin-bottom: 0.3em;
+    width: 100%;
+}
+.listado-respuestas .respuesta .titulo-respuesta h2:hover > a{
+    color: var(--colortres);
+}
+.listado-respuestas .respuesta .titulo-respuesta a{
+    text-decoration: none;
+    color: var(--colordos);
+}
+.listado-respuestas .respuesta .titulo-respuesta p{
+    font-size: .7rem;
+}
+
+
+/* Diseño de ultimos agregados */
+.ultimos-agregados{
+    grid-area: ult;
     padding: 0.3em;
+}
+.ultimos-agregados .resumen{
+    margin: .5em 0;
     border: 1px solid transparent;
     box-sizing: border-box;
     display: grid;
+    column-gap: .5em;
+    row-gap: .5em;
     grid-template-columns: repeat(2,auto);
     grid-template-rows: repeat(2,auto);
     grid-template-areas: "imagen datos"
                         "imagen texto";
 }
-.resumen:hover{
+.ultimos-agregados .resumen:hover{
     border: 1px solid var(--colortres);
-    border-radius: 5px;
+    border-radius: 7px;
 }
-.resumen:hover > figure img{
-    filter: none;
-    transform: scale(1.2);
-}
-.resumen figure{
+.ultimos-agregados .resumen figure{
     grid-area: imagen;
     width: 12em;
     height: 12em;
-    border-radius: 5px;
+    border-radius: 7px;
     overflow: hidden;
-    margin: 0.3em 1em 0.3em 0.3em;
+    margin: .3em;
 }
-.resumen img{
+.ultimos-agregados .resumen img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: grayscale(90%);
     transition: all 300ms ease-in-out;
 }
-.resumen a{
+.ultimos-agregados .resumen:hover > figure img{
+    filter: none;
+    transform: scale(1.2);
+}
+.ultimos-agregados .resumen a{
     color: var(--colordos);
     text-decoration: none;
 }
-.resumen a:hover{
+.ultimos-agregados .resumen a:hover{
     color: var(--colortres);
 }
-.resumen .titulo-resumen{
+.ultimos-agregados .resumen .titulo-resumen{
     grid-area: datos;
     color: var(--colordos);
-    margin: 0.3em 0.3em 0.4em 0.3em;
+    padding: .3em;
+    box-sizing: border-box;
 }
-.resumen .titulo-resumen h2{
+.ultimos-agregados .resumen .titulo-resumen h2{
     font-family: 'Oxanium', cursive;
     text-align: right;
     border-bottom: 1px solid var(--colortres);
     margin-bottom: 0.3em;
 }
-.resumen .titulo-resumen p{
+.ultimos-agregados .resumen .titulo-resumen p{
     font-size: .7rem;
 }
-.resumen .post-contenido{
+.ultimos-agregados .resumen .post-contenido{
     grid-area: texto;
+    margin: .3em;
+    box-sizing: border-box;
 }
-.resumen .post-contenido a{
+.ultimos-agregados .resumen .post-contenido a{
     margin: 1em;
     font-family: 'Orbitron', sans-serif;
     font: 1.2rem;
     display: block;   
-    text-align: right ;
+    text-align: right;
 }
+
 
 /* Diseño de contenido no encontrado */
 .none{

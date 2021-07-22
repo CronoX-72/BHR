@@ -4,7 +4,7 @@
     get_header();
 
 ?>
-<div class="contenido">
+<div class="contenido-landingpage">
 
 <?php
 
