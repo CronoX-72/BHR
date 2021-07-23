@@ -5,8 +5,19 @@
     <?php dynamic_sidebar( 'anuncio-dos' ); ?>
 </div>
 <div class="widget publi-movil">
-    <?php dynamic_sidebar( 'anuncio-uno' ); ?>
+    <?php 
+        if(is_active_sidebar( 'anuncio-uno' )){
+            dynamic_sidebar( 'anuncio-uno' );
+        }
+        else{
+            
+        }
+    ?>
 </div>
 <div class="widget publi-movil">
-    <?php dynamic_sidebar( 'anuncio-dos' ); ?>
+<?php 
+        if(is_active_sidebar( 'anuncio-dos' )){
+            dynamic_sidebar( 'anuncio-dos' );
+        }
+    ?>
 </div>

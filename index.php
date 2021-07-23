@@ -17,11 +17,15 @@
     // Loop de ultimas entradas
     get_template_part( 'template-parts/loops/loop-ultimos-agregados' );
 
+    //Sidebar
+    get_template_part( 'template-parts/sidebars/sidebar-general' );
+
 ?>
 
 </div>
 
 <?php
+
     // Carga del pie de paguina principal
     get_footer();
 

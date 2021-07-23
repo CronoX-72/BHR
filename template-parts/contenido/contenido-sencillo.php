@@ -15,4 +15,7 @@
         ?>
         <?php the_content(); ?>
     </div>
+    <aside class="spost">
+        <?php dynamic_sidebar( 'sidebar_grl' ); ?>
+    </aside>
 </div>

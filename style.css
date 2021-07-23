@@ -104,40 +104,62 @@ header .logo-publicidad .publi-der{
 }
 
 /* Menu */
-#btn-menu{
-    display: none;
-}
 nav{
-    border-top: solid 5px var(--colortres);
-    border-bottom: solid 1px var(--colortres);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
     width: 100%;
     height: auto;
-    margin: 10px 0;
+    background: var(--colordos);
+    color: var(--colortres);
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid var(--colortres);
+    border-top: 3px solid var(--colortres);
+    margin: 1em 0;
+}
+nav input{
+    display: none;
+}
+nav .circulo-btn-menu{
+    background: transparent;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 25px;
+    margin: .3em;
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 nav label{
-    display: none;
-    font-size: 4rem;
-    text-align: center;
-    margin: 3px 0;
-    color: var(--colordos);
-    transition: ease-in 0.2s;
+    transition: all .3s ease-out;
 }
-nav ul{
+nav label:hover{
+    color: var(--colorcuatro);
+}
+nav .circulo-btn-menu:active{
+    background: var(--colortres);
+}
+nav .menu-principal-container{
+    width: 100%;
+    height: auto;
+    margin: .5em 0;
+    transition: all .3s ease-out;
+}
+nav .menu-principal-container ul{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    margin: 0.7em 0;
 }
-nav ul a{
+nav .menu-principal-container ul li a{
     text-decoration: none;
-    font: 1.3rem 'Orbitron', sans-serif;
-    color: var(--coloruno);
-    transition: ease-in 0.2s;
-}
-nav ul a:hover{
     color: var(--colortres);
+    transition: all .3s ease-out;
 }
+nav .menu-principal-container ul li a:hover{
+    text-decoration: underline var(--colortres);
+    color: var(--colorcuatro);
+}
+
 
 /* Grid del contenido central */
 .contenido-landingpage{
@@ -214,6 +236,7 @@ nav ul a:hover{
     letter-spacing: .2em;
     border-top: 3px solid var(--colortres);
     margin: 1em 0;
+    padding-top: .3em;
     color: var(--colortres);
     text-align: right;
 }
@@ -234,12 +257,14 @@ nav ul a:hover{
     margin-bottom: 0.3em;
     width: 100%;
 }
-.listado-respuestas .respuesta .titulo-respuesta h2:hover > a{
-    color: var(--colortres);
-}
 .listado-respuestas .respuesta .titulo-respuesta a{
     text-decoration: none;
     color: var(--colordos);
+    width: 100%;
+    display: inline-block;
+}
+.listado-respuestas .respuesta .titulo-respuesta a:hover{
+    color: var(--colortres);
 }
 .listado-respuestas .respuesta .titulo-respuesta p{
     font-size: .7rem;
@@ -251,7 +276,7 @@ nav ul a:hover{
     grid-area: ult;
     padding: 0.3em;
 }
-.ultimos-agregados .resumen{
+.resumen{
     margin: .5em 0;
     border: 1px solid transparent;
     box-sizing: border-box;
@@ -263,11 +288,11 @@ nav ul a:hover{
     grid-template-areas: "imagen datos"
                         "imagen texto";
 }
-.ultimos-agregados .resumen:hover{
+.resumen:hover{
     border: 1px solid var(--colortres);
     border-radius: 7px;
 }
-.ultimos-agregados .resumen figure{
+.resumen figure{
     grid-area: imagen;
     width: 12em;
     height: 12em;
@@ -275,45 +300,46 @@ nav ul a:hover{
     overflow: hidden;
     margin: .3em;
 }
-.ultimos-agregados .resumen img{
+.resumen img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: grayscale(90%);
     transition: all 300ms ease-in-out;
 }
-.ultimos-agregados .resumen:hover > figure img{
+.resumen:hover > figure img{
     filter: none;
     transform: scale(1.2);
 }
-.ultimos-agregados .resumen a{
+.resumen a{
     color: var(--colordos);
     text-decoration: none;
 }
-.ultimos-agregados .resumen a:hover{
+.resumen a:hover{
     color: var(--colortres);
 }
-.ultimos-agregados .resumen .titulo-resumen{
+.resumen .titulo-resumen{
     grid-area: datos;
     color: var(--colordos);
     padding: .3em;
     box-sizing: border-box;
 }
-.ultimos-agregados .resumen .titulo-resumen h2{
+.resumen .titulo-resumen h2{
     font-family: 'Oxanium', cursive;
     text-align: right;
     border-bottom: 1px solid var(--colortres);
     margin-bottom: 0.3em;
 }
-.ultimos-agregados .resumen .titulo-resumen p{
+.resumen .titulo-resumen p{
     font-size: .7rem;
 }
-.ultimos-agregados .resumen .post-contenido{
+.resumen .post-contenido{
     grid-area: texto;
     margin: .3em;
     box-sizing: border-box;
+    
 }
-.ultimos-agregados .resumen .post-contenido a{
+.resumen .post-contenido a{
     margin: 1em;
     font-family: 'Orbitron', sans-serif;
     font: 1.2rem;
@@ -321,6 +347,35 @@ nav ul a:hover{
     text-align: right;
 }
 
+/* Diseño del Sidebar */
+.sidebar-principal{
+    grid-area: wid;
+    padding: 0 0 0 .5em;
+    margin: 0 0 1em .5em;
+    box-sizing: border-box;
+    border-left: 1px solid var(--colortres);
+}
+aside h2{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: .2em;
+    border-top: 3px solid var(--colortres);
+    margin: 1em 0;
+    color: var(--colortres);
+    text-align: right;
+    padding-top: .3em;
+}
+aside a{
+    text-decoration: none;
+    color: var(--colortres);
+}
+aside a:hover{
+    text-decoration: underline var(--colortres);
+    color: var(--colordos);
+}
+.sidebar-principal .wp-block-latest-comments__comment p{
+    line-height: 1.4em;
+}
 
 /* Diseño de contenido no encontrado */
 .none{
@@ -348,7 +403,7 @@ nav ul a:hover{
     grid-area: header;
     padding:  0 1em 0 0;
     box-sizing: border-box;
-    border-right: 1px solid var(--colordos);
+    border-right: 1px solid var(--colortres);
 }
 .post .header-post-simple h1{
     font-family: 'Oxanium', cursive;
@@ -359,6 +414,7 @@ nav ul a:hover{
 }
 .post .header-post-simple .datos-post{
     margin-bottom: 2em;
+    line-height: 1.2em;
 }
 .post .header-post-simple p{
     font-size: .8rem;
@@ -391,7 +447,7 @@ nav ul a:hover{
 .post .contenido-simple h2{
     text-align: right;
     margin: 2em 0 1em 0;
-    border-bottom: 1px solid var(--colordos);
+    border-bottom: 1px solid var(--colortres);
 }
 .post .contenido-simple p{
     margin-top: 1.2em;
@@ -425,6 +481,14 @@ nav ul a:hover{
     color: var(--colordos);
 }
 
+/* Sidebar dentro del post */
+.post .spost{
+    grid-area: gadget;
+    border-left: 1px solid var(--colortres);
+    padding-left: .5em;
+    box-sizing: border-box;
+}
+
 /* Paguinado next y previous */
 .post-nav{
     border-top: 1px solid var(--colordos);
@@ -453,12 +517,13 @@ nav ul a:hover{
 .header-archive span{
     display: block;
     margin: .2em 0 .5em 0;
-    font-family: 'Oxanium', cursive;
-    font-size: 2.7rem;
+    font: 2.7rem 'Oxanium', cursive;
+    color: var(--colortres);
 }
 .header-archive .archive-descripcion{
-    text-align: justify;
+    
     margin-bottom: 3em;
+
 }
 
 /* Generales del Pie de paguina */
@@ -466,14 +531,17 @@ footer{
     width: 100%;
 }
 footer .pie-paguina{
+    width: 100%;
+    height: auto;
     background: var(--colordos);
     color: var(--colortres);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    box-sizing: border-box;
 }
 footer .pie-paguina .pcaja{
-    min-width: 306px;
+    min-width: 300px;
     height: 13em;
     display: flex;
     flex-direction: column;
@@ -547,6 +615,7 @@ footer .cintillo-creditos{
     font-size: .7rem;
     justify-content: space-around;
     padding: .2em 0;
+    box-sizing: border-box;
 }
 footer .cintillo-creditos .realizado-por p{
     display: inline-block;
@@ -586,35 +655,38 @@ footer .cintillo-creditos a:hover{
     }
 
     /* Ajuste del menu */
-    nav label{
-        display: block;
-        width: 100%;
+    nav{
+        flex-direction: column;
     }
-    nav label:hover{
-        color: var(--colortres);
+    nav .circulo-btn-menu{
+        display: flex;
     }
     nav .menu-principal-container{
         display: none;
     }
-    nav ul{
+    nav .menu-principal-container ul{
         flex-direction: column;
     }
-    nav ul li{
-        padding: 1em 0;
-        width: 100%;
-        text-align: center;
-        transition: ease-in 0.2s;
-    }
-    nav ul a{
+    nav .menu-principal-container ul li a{
         display: block;
-        font-size: 3rem;
-        width: 100%;
+        text-align: center;
+        margin: .3em 0;
+        padding: .3em 0;
     }
-    nav ul li:hover{
-        background: var(--colordos);
+    nav .menu-principal-container ul li a:active{
+        background: var(--colortres);
     }
     #btn-menu:checked ~ .menu-principal-container{
         display: block;
+    }
+
+    .contenido-landingpage{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: "des des"
+                            "res res"
+                            "ult ult"
+                            "wid wid";
     }
 
     /* Seccion de destacados */

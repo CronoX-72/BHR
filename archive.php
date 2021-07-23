@@ -6,14 +6,14 @@
     
         while ( have_posts() ){
             the_post();
-            get_template_part( 'template-parts/excerpt/excerpt' );
+            get_template_part( 'template-parts/listado/listado-ultimos-agregados' );
         }
 
-        get_template_part( 'template-parts/excerpt/paguinado' );
+        get_template_part( 'template-parts/listado/paguinado' );
         
     }
         else{
-            get_template_part( 'templalte-parts/excerpt-none' );
+            get_template_part( 'templalte-parts/listado/no-encontrado' );
         }
     get_footer();
 ?>
